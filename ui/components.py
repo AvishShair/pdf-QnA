@@ -308,59 +308,6 @@ def get_premium_css(theme: str = "light") -> str:
                     opacity: 1;
                 }
             }
-            
-            /* Loading Spinner */
-            .loading-spinner {
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border: 3px solid rgba(106, 92, 255, 0.3);
-                border-radius: 50%;
-                border-top-color: #6A5CFF;
-                animation: spin 0.8s linear infinite;
-            }
-            
-            @keyframes spin {
-                to { transform: rotate(360deg); }
-            }
-            
-            /* Tooltip */
-            .tooltip {
-                position: relative;
-                display: inline-block;
-            }
-            
-            .tooltip:hover::after {
-                content: attr(data-tooltip);
-                position: absolute;
-                bottom: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.9);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 8px;
-                white-space: nowrap;
-                font-size: 0.85rem;
-                z-index: 1000;
-            }
-            
-            /* Enhanced Input Focus */
-            textarea:focus, input:focus {
-                outline: 2px solid rgba(106, 92, 255, 0.5) !important;
-                border-color: #6A5CFF !important;
-                box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.1) !important;
-            }
-            
-            /* Smooth transitions for all interactive elements */
-            button, .stButton button {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            }
-            
-            button:hover, .stButton button:hover {
-                transform: translateY(-1px) !important;
-                box-shadow: 0 4px 12px rgba(106, 92, 255, 0.3) !important;
-            }
         </style>
         """
     else:  # Light theme
@@ -656,59 +603,6 @@ def get_premium_css(theme: str = "light") -> str:
                     opacity: 1;
                 }
             }
-            
-            /* Loading Spinner */
-            .loading-spinner {
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border: 3px solid rgba(106, 92, 255, 0.3);
-                border-radius: 50%;
-                border-top-color: #6A5CFF;
-                animation: spin 0.8s linear infinite;
-            }
-            
-            @keyframes spin {
-                to { transform: rotate(360deg); }
-            }
-            
-            /* Tooltip */
-            .tooltip {
-                position: relative;
-                display: inline-block;
-            }
-            
-            .tooltip:hover::after {
-                content: attr(data-tooltip);
-                position: absolute;
-                bottom: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.9);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 8px;
-                white-space: nowrap;
-                font-size: 0.85rem;
-                z-index: 1000;
-            }
-            
-            /* Enhanced Input Focus */
-            textarea:focus, input:focus {
-                outline: 2px solid rgba(106, 92, 255, 0.5) !important;
-                border-color: #6A5CFF !important;
-                box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.1) !important;
-            }
-            
-            /* Smooth transitions for all interactive elements */
-            button, .stButton button {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            }
-            
-            button:hover, .stButton button:hover {
-                transform: translateY(-1px) !important;
-                box-shadow: 0 4px 12px rgba(106, 92, 255, 0.3) !important;
-            }
         </style>
         """
 
@@ -728,18 +622,10 @@ def render_chat_message(role: str, content: str, sources: Optional[List[Dict]] =
             unsafe_allow_html=True
         )
     else:
-        # Assistant message with interactive features
-        col1, col2 = st.columns([20, 1])
-        with col1:
-            st.markdown(
-                f'<div class="chat-bubble-assistant">{content}</div>',
-                unsafe_allow_html=True
-            )
-        with col2:
-            # Copy button for assistant responses
-            unique_id = str(hash(content))[-8:]
-            if st.button("📋", key=f"copy_{unique_id}", help="Copy response"):
-                st.toast("✅ Copied!", icon="✅")
+        st.markdown(
+            f'<div class="chat-bubble-assistant">{content}</div>',
+            unsafe_allow_html=True
+        )
         
         # Display sources if available
         if sources and len(sources) > 0:
@@ -992,89 +878,6 @@ def render_streaming_message(placeholder, content_so_far: str):
     typing_indicator = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>'
     placeholder.markdown(
         f'<div class="chat-bubble-assistant">{content_so_far}<span style="opacity: 0.5;">▌</span></div>',
-        unsafe_allow_html=True
-    )
-
-
-def render_welcome_screen():
-    """
-    Render an engaging welcome screen when no PDFs are uploaded
-    """
-    st.markdown(
-        '''
-        <div class="glass-card" style="text-align: center; padding: 3rem; margin: 2rem auto; max-width: 800px;">
-            <div style="font-size: 5rem; margin-bottom: 1rem;">📄</div>
-            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                Welcome to PDF Q&A Bot
-            </h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
-                Unlock the power of AI to extract insights from your PDF documents instantly.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                <div class="glass-card" style="padding: 1.5rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
-                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Fast Processing</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Upload and process multiple PDFs in seconds</p>
-                </div>
-                
-                <div class="glass-card" style="padding: 1.5rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
-                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">AI-Powered</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Powered by Google Gemini for accurate answers</p>
-                </div>
-                
-                <div class="glass-card" style="padding: 1.5rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
-                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Source Citations</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Every answer backed by relevant sources</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 2.5rem; padding: 1.5rem; background: rgba(106, 92, 255, 0.1); border-radius: 16px; border: 1px solid rgba(106, 92, 255, 0.3);">
-                <p style="font-size: 1rem; color: var(--text-primary); margin: 0;">
-                    <strong>👈 Get Started:</strong> Upload your PDF files from the sidebar to begin!
-                </p>
-            </div>
-        </div>
-        ''',
-        unsafe_allow_html=True
-    )
-
-
-def render_copy_button(text: str, button_key: str):
-    """
-    Render a copy button for text content
-    
-    Args:
-        text: Text to copy
-        button_key: Unique key for the button
-    """
-    if st.button("📋 Copy", key=button_key, help="Copy to clipboard"):
-        st.session_state[f'copied_{button_key}'] = True
-        st.toast("✅ Copied to clipboard!", icon="✅")
-
-
-def render_stats_card(title: str, value: str, icon: str, color: str = "#6A5CFF"):
-    """
-    Render an animated statistics card
-    
-    Args:
-        title: Card title
-        value: Statistic value
-        icon: Emoji icon
-        color: Card accent color
-    """
-    st.markdown(
-        f'''
-        <div class="glass-card" style="padding: 1.5rem; text-align: center; cursor: pointer; transition: all 0.3s ease;" 
-             onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='{color}';" 
-             onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">{icon}</div>
-            <div style="font-size: 2rem; font-weight: 700; color: {color}; margin-bottom: 0.25rem;">{value}</div>
-            <div style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">{title}</div>
-        </div>
-        ''',
         unsafe_allow_html=True
     )
 
