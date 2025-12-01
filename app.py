@@ -330,7 +330,7 @@ def main():
         # Theme toggle
         if st.button("🌗 Toggle Theme", use_container_width=True):
             st.session_state.theme = "dark" if st.session_state.theme == "light" else "light"
-            st.experimental_rerun()
+            st.rerun()
 
         api_key = get_api_key()
         st.divider()
@@ -354,7 +354,7 @@ def main():
                     fast_mode=fast_mode,
                 )
                 if success:
-                    st.experimental_rerun()
+                    st.rerun()
 
         st.divider()
 

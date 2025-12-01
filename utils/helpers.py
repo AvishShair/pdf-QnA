@@ -2,7 +2,13 @@
 
 import re
 from typing import List, Dict
-import tiktoken
+
+# Try to import tiktoken, but use fallback if not available
+try:
+    import tiktoken
+    TIKTOKEN_AVAILABLE = True
+except ImportError:
+    TIKTOKEN_AVAILABLE = False
 
 
 def estimate_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
@@ -11,17 +17,20 @@ def estimate_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
     
     Args:
         text: Input text
-        model: Model name for tokenizer
+        model: Model name for tokenizer (not used if tiktoken unavailable)
         
     Returns:
         Estimated token count
     """
-    try:
-        encoding = tiktoken.encoding_for_model(model)
-        return len(encoding.encode(text))
-    except:
-        # Fallback: approximate 1 token = 4 characters
-        return len(text) // 4
+    if TIKTOKEN_AVAILABLE:
+        try:
+            encoding = tiktoken.encoding_for_model(model)
+            return len(encoding.encode(text))
+        except:
+            pass
+    
+    # Fallback: approximate 1 token = 4 characters
+    return len(text) // 4
 
 
 def chunk_text_by_tokens(
