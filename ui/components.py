@@ -265,6 +265,800 @@ def get_premium_css(theme: str = "light") -> str:
                 backdrop-filter: blur(20px) saturate(180%);
             }
             
+            /* Streamlit Component Text Colors - Dark Theme */
+            [data-testid="stSidebar"] * {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] h4,
+            [data-testid="stSidebar"] h5,
+            [data-testid="stSidebar"] h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stSidebar"] p,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] span,
+            [data-testid="stSidebar"] div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Button text colors */
+            [data-testid="stSidebar"] button {
+                color: white !important;
+            }
+            
+            [data-testid="stSidebar"] button[kind="secondary"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            [data-testid="stSidebar"] button[kind="primary"] {
+                background: var(--gradient-primary) !important;
+                color: white !important;
+            }
+            
+            /* Input fields */
+            [data-testid="stSidebar"] input,
+            [data-testid="stSidebar"] textarea {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+                border-color: rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            [data-testid="stSidebar"] input::placeholder {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Checkboxes and radio buttons */
+            [data-testid="stSidebar"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Expander headers */
+            [data-testid="stSidebar"] summary {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Main content area text */
+            .main * {
+                color: var(--text-primary) !important;
+            }
+            
+            .main h1, .main h2, .main h3, .main h4, .main h5, .main h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            .main p, .main span, .main div, .main label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit chat input */
+            [data-testid="stChatInput"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stChatInput"] input {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stChatInput"] input::placeholder {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Streamlit buttons in main area */
+            .main button {
+                color: white !important;
+            }
+            
+            .main button[kind="secondary"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            /* File uploader */
+            [data-testid="stFileUploader"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stFileUploader"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Metrics */
+            [data-testid="stMetricValue"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stMetricLabel"] {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Captions */
+            [data-testid="stCaption"] {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Expanders */
+            [data-testid="stExpander"] summary {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stExpander"] div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Code blocks */
+            [data-testid="stCodeBlock"] {
+                background-color: rgba(0, 0, 0, 0.3) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Markdown text */
+            .main .stMarkdown {
+                color: var(--text-primary) !important;
+            }
+            
+            .main .stMarkdown p {
+                color: var(--text-primary) !important;
+            }
+            
+            .main .stMarkdown strong {
+                color: var(--text-primary) !important;
+            }
+            
+            .main .stMarkdown em {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Info boxes and alerts */
+            [data-baseweb="notification"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stAlert"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stAlert"] p,
+            [data-testid="stAlert"] div,
+            [data-testid="stAlert"] span {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Info, Success, Warning, Error boxes */
+            .stAlert {
+                color: var(--text-primary) !important;
+            }
+            
+            .stAlert p,
+            .stAlert div,
+            .stAlert span {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Spinner text */
+            [data-testid="stSpinner"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stSpinner"] + div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Headers in markdown */
+            .main h1, .main h2, .main h3, .main h4, .main h5, .main h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stMarkdownContainer"] h1,
+            [data-testid="stMarkdownContainer"] h2,
+            [data-testid="stMarkdownContainer"] h3,
+            [data-testid="stMarkdownContainer"] h4,
+            [data-testid="stMarkdownContainer"] h5,
+            [data-testid="stMarkdownContainer"] h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Dividers */
+            hr {
+                border-color: rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            [data-testid="stHorizontalBlock"] hr {
+                border-color: rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            /* Expander content */
+            [data-testid="stExpander"] [data-testid="stMarkdownContainer"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stExpander"] [data-testid="stMarkdownContainer"] p,
+            [data-testid="stExpander"] [data-testid="stMarkdownContainer"] li,
+            [data-testid="stExpander"] [data-testid="stMarkdownContainer"] ul,
+            [data-testid="stExpander"] [data-testid="stMarkdownContainer"] ol {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Chat messages */
+            [data-testid="stChatMessage"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stChatMessageContent"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="stChatMessageContent"] p {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Selectbox and dropdowns */
+            [data-baseweb="select"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            [data-baseweb="select"] input {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Checkbox labels */
+            [data-baseweb="checkbox"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Radio button labels */
+            [data-baseweb="radio"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Text input labels */
+            [data-baseweb="input"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All Streamlit text elements */
+            .stText,
+            .stMarkdown,
+            .stMarkdown p,
+            .stMarkdown li,
+            .stMarkdown ul,
+            .stMarkdown ol {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Container backgrounds */
+            [data-testid="stVerticalBlock"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Subheader and title */
+            [data-testid="stHeader"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All divs and spans in main */
+            .main div:not([class*="premium"]):not([class*="glass"]):not([class*="chat"]):not([class*="citation"]) {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Links */
+            a {
+                color: #6A5CFF !important;
+            }
+            
+            a:hover {
+                color: #AD7BFF !important;
+            }
+            
+            /* Lists */
+            ul, ol, li {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Strong and emphasis */
+            strong, b {
+                color: var(--text-primary) !important;
+            }
+            
+            em, i {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Blockquotes */
+            blockquote {
+                border-left-color: rgba(106, 92, 255, 0.5) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Tables */
+            table {
+                color: var(--text-primary) !important;
+            }
+            
+            table th, table td {
+                color: var(--text-primary) !important;
+                border-color: rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            /* Progress bars */
+            [data-testid="stProgress"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Empty states */
+            [data-testid="stEmpty"] {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Tooltips */
+            [data-baseweb="popover"] {
+                background-color: rgba(0, 0, 0, 0.9) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Help text */
+            [data-testid="stTooltipIcon"] {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Status elements */
+            [data-testid="stStatusWidget"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit default text elements - comprehensive coverage */
+            .element-container,
+            .stMarkdown,
+            .stText {
+                color: var(--text-primary) !important;
+            }
+            
+            .element-container p,
+            .element-container span,
+            .element-container div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All text in sidebar */
+            [data-testid="stSidebar"] .element-container,
+            [data-testid="stSidebar"] .stMarkdown,
+            [data-testid="stSidebar"] .stText {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit widget labels */
+            [data-testid="stWidgetLabel"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit widget value */
+            [data-testid="stWidgetValue"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All paragraph tags */
+            p {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All span tags */
+            span:not([class*="premium"]):not([class*="glass"]) {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit columns */
+            [data-testid="column"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-testid="column"] * {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit containers */
+            [data-testid="stVerticalBlock"] > div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit horizontal blocks */
+            [data-testid="stHorizontalBlock"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit tabs */
+            [data-baseweb="tab"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-baseweb="tab-list"] button {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit multiselect */
+            [data-baseweb="select"] [role="listbox"] {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit date input */
+            [data-baseweb="input"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit number input */
+            [data-baseweb="input"] input[type="number"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit slider */
+            [data-baseweb="slider"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [data-baseweb="slider"] label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit text area */
+            [data-baseweb="textarea"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            [data-baseweb="textarea"] textarea {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit color picker */
+            [data-testid="stColorPicker"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit time input */
+            [data-baseweb="input"] input[type="time"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit download button */
+            [data-testid="stDownloadButton"] {
+                color: white !important;
+            }
+            
+            /* Streamlit data editor */
+            [data-testid="stDataFrame"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit json */
+            [data-testid="stJson"] {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit plotly charts - ensure text is visible */
+            .js-plotly-plot {
+                background-color: transparent !important;
+            }
+            
+            /* Streamlit dataframe */
+            [data-testid="stDataFrame"] table {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe headers */
+            [data-testid="stDataFrame"] thead {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe cells */
+            [data-testid="stDataFrame"] td,
+            [data-testid="stDataFrame"] th {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe index */
+            [data-testid="stDataFrame"] .index {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe column headers */
+            [data-testid="stDataFrame"] .col_heading {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe row headers */
+            [data-testid="stDataFrame"] .row_heading {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe data cells */
+            [data-testid="stDataFrame"] .data {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe selected cells */
+            [data-testid="stDataFrame"] .selected {
+                background-color: rgba(106, 92, 255, 0.3) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe hover */
+            [data-testid="stDataFrame"] .hover {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+            
+            /* Streamlit dataframe filter */
+            [data-testid="stDataFrame"] input {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe pagination */
+            [data-testid="stDataFrame"] .pagination {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe pagination buttons */
+            [data-testid="stDataFrame"] .pagination button {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe pagination input */
+            [data-testid="stDataFrame"] .pagination input {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe search */
+            [data-testid="stDataFrame"] .search {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe search input */
+            [data-testid="stDataFrame"] .search input {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar */
+            [data-testid="stDataFrame"] .toolbar {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar buttons */
+            [data-testid="stDataFrame"] .toolbar button {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar icons */
+            [data-testid="stDataFrame"] .toolbar svg {
+                fill: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar labels */
+            [data-testid="stDataFrame"] .toolbar label {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar select */
+            [data-testid="stDataFrame"] .toolbar select {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar input */
+            [data-testid="stDataFrame"] .toolbar input {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar textarea */
+            [data-testid="stDataFrame"] .toolbar textarea {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar checkbox */
+            [data-testid="stDataFrame"] .toolbar input[type="checkbox"] {
+                accent-color: #6A5CFF !important;
+            }
+            
+            /* Streamlit dataframe toolbar radio */
+            [data-testid="stDataFrame"] .toolbar input[type="radio"] {
+                accent-color: #6A5CFF !important;
+            }
+            
+            /* Streamlit dataframe toolbar range */
+            [data-testid="stDataFrame"] .toolbar input[type="range"] {
+                accent-color: #6A5CFF !important;
+            }
+            
+            /* Streamlit dataframe toolbar color */
+            [data-testid="stDataFrame"] .toolbar input[type="color"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+            }
+            
+            /* Streamlit dataframe toolbar date */
+            [data-testid="stDataFrame"] .toolbar input[type="date"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar time */
+            [data-testid="stDataFrame"] .toolbar input[type="time"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar datetime */
+            [data-testid="stDataFrame"] .toolbar input[type="datetime-local"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar month */
+            [data-testid="stDataFrame"] .toolbar input[type="month"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar week */
+            [data-testid="stDataFrame"] .toolbar input[type="week"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar url */
+            [data-testid="stDataFrame"] .toolbar input[type="url"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar email */
+            [data-testid="stDataFrame"] .toolbar input[type="email"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar tel */
+            [data-testid="stDataFrame"] .toolbar input[type="tel"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar search */
+            [data-testid="stDataFrame"] .toolbar input[type="search"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar file */
+            [data-testid="stDataFrame"] .toolbar input[type="file"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar submit */
+            [data-testid="stDataFrame"] .toolbar input[type="submit"] {
+                background: var(--gradient-primary) !important;
+                color: white !important;
+            }
+            
+            /* Streamlit dataframe toolbar reset */
+            [data-testid="stDataFrame"] .toolbar input[type="reset"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button */
+            [data-testid="stDataFrame"] .toolbar button {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button primary */
+            [data-testid="stDataFrame"] .toolbar button[type="submit"] {
+                background: var(--gradient-primary) !important;
+                color: white !important;
+            }
+            
+            /* Streamlit dataframe toolbar button secondary */
+            [data-testid="stDataFrame"] .toolbar button[type="button"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button reset */
+            [data-testid="stDataFrame"] .toolbar button[type="reset"] {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button disabled */
+            [data-testid="stDataFrame"] .toolbar button:disabled {
+                opacity: 0.5 !important;
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button hover */
+            [data-testid="stDataFrame"] .toolbar button:hover:not(:disabled) {
+                background-color: rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button active */
+            [data-testid="stDataFrame"] .toolbar button:active:not(:disabled) {
+                background-color: rgba(255, 255, 255, 0.3) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button focus */
+            [data-testid="stDataFrame"] .toolbar button:focus:not(:disabled) {
+                outline: 2px solid #6A5CFF !important;
+                outline-offset: 2px !important;
+            }
+            
+            /* Streamlit dataframe toolbar button visited */
+            [data-testid="stDataFrame"] .toolbar button:visited {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link */
+            [data-testid="stDataFrame"] .toolbar a {
+                color: #6A5CFF !important;
+            }
+            
+            [data-testid="stDataFrame"] .toolbar a:hover {
+                color: #AD7BFF !important;
+            }
+            
+            [data-testid="stDataFrame"] .toolbar a:visited {
+                color: #6A5CFF !important;
+            }
+            
+            [data-testid="stDataFrame"] .toolbar a:active {
+                color: #AD7BFF !important;
+            }
+            
+            [data-testid="stDataFrame"] .toolbar a:focus {
+                outline: 2px solid #6A5CFF !important;
+                outline-offset: 2px !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link disabled */
+            [data-testid="stDataFrame"] .toolbar a:disabled {
+                opacity: 0.5 !important;
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link hover disabled */
+            [data-testid="stDataFrame"] .toolbar a:hover:disabled {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link active disabled */
+            [data-testid="stDataFrame"] .toolbar a:active:disabled {
+                color: var(--text-secondary) !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link focus disabled */
+            [data-testid="stDataFrame"] .toolbar a:focus:disabled {
+                outline: none !important;
+            }
+            
+            /* Streamlit dataframe toolbar button link visited disabled */
+            [data-testid="stDataFrame"] .toolbar a:visited:disabled {
+                color: var(--text-secondary) !important;
+            }
+            
             /* Metric Cards */
             .metric-card {
                 background: var(--bg-glass);
@@ -307,6 +1101,84 @@ def get_premium_css(theme: str = "light") -> str:
                     transform: translateY(-10px);
                     opacity: 1;
                 }
+            }
+            
+            /* ============================================
+               COMPREHENSIVE CATCH-ALL FOR DARK THEME
+               ============================================ */
+            
+            /* Force all text in sidebar to be visible */
+            [data-testid="stSidebar"] p,
+            [data-testid="stSidebar"] span:not([class]),
+            [data-testid="stSidebar"] div:not([class*="premium"]):not([class*="glass"]):not([class*="chat"]):not([class*="citation"]),
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] h4, [data-testid="stSidebar"] h5, [data-testid="stSidebar"] h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Force all text in main content to be visible */
+            .main p:not([class]),
+            .main span:not([class]),
+            .main div:not([class*="premium"]):not([class*="glass"]):not([class*="chat"]):not([class*="citation"]),
+            .main label,
+            .main h1, .main h2, .main h3, .main h4, .main h5, .main h6 {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All Streamlit components text */
+            [data-testid*="st"] p,
+            [data-testid*="st"] span:not([class]),
+            [data-testid*="st"] div:not([class*="premium"]):not([class*="glass"]) {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Info/Success/Warning/Error boxes - ensure text visible */
+            [role="alert"],
+            .stAlert,
+            [data-baseweb="notification"],
+            [data-testid="stAlert"] {
+                color: var(--text-primary) !important;
+            }
+            
+            [role="alert"] *,
+            .stAlert *,
+            [data-baseweb="notification"] *,
+            [data-testid="stAlert"] * {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Spinner and loading text */
+            [data-testid="stSpinner"] + div,
+            [data-testid="stSpinner"] ~ div {
+                color: var(--text-primary) !important;
+            }
+            
+            /* All markdown content */
+            [data-testid="stMarkdownContainer"],
+            [data-testid="stMarkdownContainer"] * {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Expander content */
+            details,
+            details * {
+                color: var(--text-primary) !important;
+            }
+            
+            /* Dividers */
+            hr, .stDivider, [data-testid="stHorizontalBlock"] hr {
+                border-color: rgba(255, 255, 255, 0.3) !important;
+                background-color: rgba(255, 255, 255, 0.3) !important;
+            }
+            
+            /* Ensure buttons have visible text */
+            button:not([disabled]) {
+                color: white !important;
+            }
+            
+            button[kind="secondary"]:not([disabled]) {
+                color: var(--text-primary) !important;
             }
         </style>
         """

@@ -142,7 +142,6 @@ def get_api_key() -> Optional[str]:
     api_key = os.getenv("GOOGLE_API_KEY")
 
     if not api_key:
-        st.sidebar.warning("⚠️ No API Key found.")
         user_key = st.sidebar.text_input(
             "Enter Google Gemini API Key", type="password"
         )
