@@ -343,18 +343,32 @@ def main():
             extract_images = st.checkbox("Extract Images", False)
             fast_mode = st.checkbox("Fast Mode (recommended)", True)
 
-        if uploaded_files and api_key:
-            if st.button("🚀 Process PDFs", use_container_width=True):
-                st.session_state.chat_history = []
-                success = process_pdfs(
-                    uploaded_files, api_key,
-                    use_ocr=use_ocr,
-                    extract_tables=extract_tables,
-                    extract_images=extract_images,
-                    fast_mode=fast_mode,
-                )
-                if success:
-                    st.rerun()
+        # Always show the button, but disable if conditions aren't met
+        can_process = bool(uploaded_files and api_key)
+        
+        if not uploaded_files:
+            st.info("📤 Please upload PDF files to proceed")
+        elif not api_key:
+            st.info("🔑 Please provide an API key to proceed")
+        
+        process_button = st.button(
+            "🚀 Process PDFs", 
+            use_container_width=True,
+            disabled=not can_process,
+            type="primary" if can_process else "secondary"
+        )
+        
+        if process_button and can_process:
+            st.session_state.chat_history = []
+            success = process_pdfs(
+                uploaded_files, api_key,
+                use_ocr=use_ocr,
+                extract_tables=extract_tables,
+                extract_images=extract_images,
+                fast_mode=fast_mode,
+            )
+            if success:
+                st.rerun()
 
         st.divider()
 
