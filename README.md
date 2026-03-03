@@ -257,5 +257,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made with ❤️ using Python, Streamlit, and Google Gemini AI**
 
